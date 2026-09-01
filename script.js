@@ -76,11 +76,9 @@ const allHolidays = {
         "17-05-2027": "Bakrid / Eid-ul-Adha",
         "16-06-2027": "Muharram",
 
-        // Same date - two holidays
         "15-08-2027": "Independence Day / Eid Milad-un-Nabi",
 
         "25-08-2027": "Sri Krishna Janmashtami",
-
         "04-09-2027": "Vinayaka Chavithi",
 
         "02-10-2027": "Gandhi Jayanti",
@@ -116,7 +114,6 @@ const allHolidays = {
         "27-03-2028": "Ugadi",
         "03-04-2028": "Sri Rama Navami",
 
-        // Same date - two holidays
         "14-04-2028": "Good Friday / Dr. B.R. Ambedkar Jayanti",
 
         "06-05-2028": "Bakrid / Eid-ul-Adha",
@@ -192,7 +189,6 @@ const allHolidays = {
         "03-04-2030": "Ugadi",
         "12-04-2030": "Sri Rama Navami",
 
-        // Same date - two holidays
         "14-04-2030": "Bakrid / Eid-ul-Adha / Dr. B.R. Ambedkar Jayanti",
 
         "19-04-2030": "Good Friday",
@@ -230,7 +226,7 @@ let currentMonth = 0;
 
 
 // ============================================================
-// MINIMUM / MAXIMUM YEAR
+// YEAR LIMITS
 // ============================================================
 
 const MIN_YEAR = 2026;
@@ -292,7 +288,6 @@ function getWeeklyHolidayName(date) {
 
     // Sunday
     if (day === 0) {
-
         return "Sunday";
     }
 
@@ -305,7 +300,6 @@ function getWeeklyHolidayName(date) {
             dateNumber >= 8 &&
             dateNumber <= 14
         ) {
-
             return "2nd Saturday";
         }
 
@@ -315,7 +309,6 @@ function getWeeklyHolidayName(date) {
             dateNumber >= 22 &&
             dateNumber <= 28
         ) {
-
             return "4th Saturday";
         }
     }
@@ -359,7 +352,7 @@ function getHolidayName(date) {
 
 
 // ============================================================
-// HOLIDAY TYPE
+// GET HOLIDAY TYPE
 // ============================================================
 
 function getHolidayType(date) {
@@ -374,6 +367,7 @@ function getHolidayType(date) {
         allHolidays[year] || {};
 
 
+    // Special holiday
     if (
         Object.prototype.hasOwnProperty.call(
             yearHolidays,
@@ -385,6 +379,7 @@ function getHolidayType(date) {
     }
 
 
+    // Weekly holiday
     if (
         getWeeklyHolidayName(date)
     ) {
@@ -532,7 +527,7 @@ function renderCalendar() {
 
 
     // ========================================================
-    // FIRST DAY
+    // FIRST DAY OF MONTH
     // ========================================================
 
     const firstDay =
@@ -580,7 +575,7 @@ function renderCalendar() {
 
 
     // ========================================================
-    // CREATE DAYS
+    // CREATE CALENDAR DAYS
     // ========================================================
 
     for (
@@ -692,6 +687,10 @@ function renderCalendar() {
         }
 
 
+        // ====================================================
+        // ADD DAY TO CALENDAR
+        // ====================================================
+
         calendar.appendChild(
             dayElement
         );
@@ -761,9 +760,14 @@ function getYearStatistics(year) {
 
     return {
 
-        totalDays,
-        totalHolidays,
-        workingDays
+        totalDays:
+            totalDays,
+
+        totalHolidays:
+            totalHolidays,
+
+        workingDays:
+            workingDays
 
     };
 }
@@ -828,8 +832,11 @@ function getHolidayProgress(year) {
 
     return {
 
-        completed,
-        remaining
+        completed:
+            completed,
+
+        remaining:
+            remaining
 
     };
 }
@@ -925,7 +932,10 @@ function changeYear(year) {
         Number(year);
 
 
-    // Minimum year
+    // ========================================================
+    // LIMIT YEAR
+    // ========================================================
+
     if (
         year < MIN_YEAR
     ) {
@@ -935,7 +945,6 @@ function changeYear(year) {
     }
 
 
-    // Maximum year
     if (
         year > MAX_YEAR
     ) {
@@ -949,7 +958,7 @@ function changeYear(year) {
         year;
 
 
-    // Every year starts from January
+    // Start from January
     currentMonth =
         0;
 
@@ -963,7 +972,7 @@ function changeYear(year) {
 
 
 // ============================================================
-// ACTIVE YEAR BUTTON
+// UPDATE YEAR BUTTONS
 // ============================================================
 
 function updateYearButtons() {
@@ -1012,7 +1021,10 @@ function previousMonth() {
     currentMonth--;
 
 
-    // Move to previous year
+    // ========================================================
+    // GO TO PREVIOUS YEAR
+    // ========================================================
+
     if (
         currentMonth < 0
     ) {
@@ -1025,7 +1037,7 @@ function previousMonth() {
 
 
     // ========================================================
-    // MINIMUM: JANUARY 2026
+    // MINIMUM = JANUARY 2026
     // ========================================================
 
     if (
@@ -1057,7 +1069,10 @@ function nextMonth() {
     currentMonth++;
 
 
-    // Move to next year
+    // ========================================================
+    // GO TO NEXT YEAR
+    // ========================================================
+
     if (
         currentMonth > 11
     ) {
@@ -1070,8 +1085,79 @@ function nextMonth() {
 
 
     // ========================================================
-    // MAXIMUM: DECEMBER 2030
+    // MAXIMUM = DECEMBER 2030
     // ========================================================
 
     if (
-       
+        currentYear > MAX_YEAR
+    ) {
+
+        currentYear =
+            MAX_YEAR;
+
+        currentMonth =
+            11;
+    }
+
+
+    renderCalendar();
+
+    updateStatistics();
+
+    updateYearButtons();
+}
+
+
+// ============================================================
+// INITIAL LOAD
+// ============================================================
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        console.log(
+            "MGIT Holiday Calendar Loaded"
+        );
+
+
+        // ====================================================
+        // SAFETY CHECK
+        // ====================================================
+
+        if (
+            currentYear < MIN_YEAR
+        ) {
+
+            currentYear =
+                MIN_YEAR;
+
+            currentMonth =
+                0;
+        }
+
+
+        if (
+            currentYear > MAX_YEAR
+        ) {
+
+            currentYear =
+                MAX_YEAR;
+
+            currentMonth =
+                11;
+        }
+
+
+        // ====================================================
+        // LOAD CALENDAR
+        // ====================================================
+
+        renderCalendar();
+
+        updateStatistics();
+
+        updateYearButtons();
+
+    }
+);
