@@ -34,8 +34,8 @@ const allHolidays = {
         "04-09-2026": "Sri Krishna Janmashtami",
         "14-09-2026": "Vinayaka Chavithi",
         "02-10-2026": "Gandhi Jayanti",
-        "19-10-2026": "Durgashtami / Mahanavami",
         "20-10-2026": "Vijaya Dasami / Dussehra",
+        "21-10-2026": "Vijaya Dasami Following Day
 
         "07-11-2026": "Naraka Chaturdashi",
         "08-11-2026": "Diwali",
@@ -46,24 +46,142 @@ const allHolidays = {
     },
 
     2027: {
-        "01-01-2027": "New Year",
-        "26-01-2027": "Republic Day"
+        "14-01-2026": "Bhogi",
+        "15-01-2026": "Sankranti / Pongal",
+        "16-01-2026": "Kanumu",
+        "26-01-2026": "Republic Day",
+
+        "15-02-2026": "Maha Shivaratri",
+        "03-03-2026": "Holi",
+        "19-03-2026": "Ugadi",
+        "21-03-2026": "Ramzan / Eid-ul-Fitr",
+        "27-03-2026": "Sri Rama Navami",
+
+        "03-04-2026": "Good Friday",
+        "14-04-2026": "Dr. B.R. Ambedkar Jayanti",
+        "27-05-2026": "Bakrid / Eid-ul-Adha",
+        "26-06-2026": "Muharram",
+
+        "10-08-2026": "Bonalu",
+        "15-08-2026": "Independence Day",
+        "26-08-2026": "Eid Milad-un-Nabi",
+
+        "04-09-2026": "Sri Krishna Janmashtami",
+        "14-09-2026": "Vinayaka Chavithi",
+        "02-10-2026": "Gandhi Jayanti",
+        "20-10-2026": "Vijaya Dasami / Dussehra",
+        "21-10-2026": "Vijaya Dasami Following Day
+
+        "07-11-2026": "Naraka Chaturdashi",
+        "08-11-2026": "Diwali",
+        "24-11-2026": "Karthika Purnima / Guru Nanak Jayanti",
+
+        "25-12-2026": "Christmas",
+        "26-12-2026": "Following Day of Christmas"
     },
 
     2028: {
-        "01-01-2028": "New Year",
-        "26-01-2028": "Republic Day"
-    },
+        "14-01-2026": "Bhogi",
+        "15-01-2026": "Sankranti / Pongal",
+        "16-01-2026": "Kanumu",
+        "26-01-2026": "Republic Day",
+
+        "15-02-2026": "Maha Shivaratri",
+        "03-03-2026": "Holi",
+        "19-03-2026": "Ugadi",
+        "21-03-2026": "Ramzan / Eid-ul-Fitr",
+        "27-03-2026": "Sri Rama Navami",
+
+        "03-04-2026": "Good Friday",
+        "14-04-2026": "Dr. B.R. Ambedkar Jayanti",
+        "27-05-2026": "Bakrid / Eid-ul-Adha",
+        "26-06-2026": "Muharram",
+
+        "10-08-2026": "Bonalu",
+        "15-08-2026": "Independence Day",
+        "26-08-2026": "Eid Milad-un-Nabi",
+
+        "04-09-2026": "Sri Krishna Janmashtami",
+        "14-09-2026": "Vinayaka Chavithi",
+        "02-10-2026": "Gandhi Jayanti",
+        "20-10-2026": "Vijaya Dasami / Dussehra",
+        "21-10-2026": "Vijaya Dasami Following Day
+
+        "07-11-2026": "Naraka Chaturdashi",
+        "08-11-2026": "Diwali",
+        "24-11-2026": "Karthika Purnima / Guru Nanak Jayanti",
+
+        "25-12-2026": "Christmas",
+        "26-12-2026": "Following Day of Christmas"
 
     2029: {
-        "01-01-2029": "New Year",
-        "26-01-2029": "Republic Day"
+        "14-01-2026": "Bhogi",
+        "15-01-2026": "Sankranti / Pongal",
+        "16-01-2026": "Kanumu",
+        "26-01-2026": "Republic Day",
+
+        "15-02-2026": "Maha Shivaratri",
+        "03-03-2026": "Holi",
+        "19-03-2026": "Ugadi",
+        "21-03-2026": "Ramzan / Eid-ul-Fitr",
+        "27-03-2026": "Sri Rama Navami",
+
+        "03-04-2026": "Good Friday",
+        "14-04-2026": "Dr. B.R. Ambedkar Jayanti",
+        "27-05-2026": "Bakrid / Eid-ul-Adha",
+        "26-06-2026": "Muharram",
+
+        "10-08-2026": "Bonalu",
+        "15-08-2026": "Independence Day",
+        "26-08-2026": "Eid Milad-un-Nabi",
+
+        "04-09-2026": "Sri Krishna Janmashtami",
+        "14-09-2026": "Vinayaka Chavithi",
+        "02-10-2026": "Gandhi Jayanti",
+        "20-10-2026": "Vijaya Dasami / Dussehra",
+        "21-10-2026": "Vijaya Dasami Following Day
+
+        "07-11-2026": "Naraka Chaturdashi",
+        "08-11-2026": "Diwali",
+        "24-11-2026": "Karthika Purnima / Guru Nanak Jayanti",
+
+        "25-12-2026": "Christmas",
+        "26-12-2026": "Following Day of Christmas"
     },
 
     2030: {
-        "01-01-2030": "New Year",
-        "26-01-2030": "Republic Day"
-    }
+        "14-01-2026": "Bhogi",
+        "15-01-2026": "Sankranti / Pongal",
+        "16-01-2026": "Kanumu",
+        "26-01-2026": "Republic Day",
+
+        "15-02-2026": "Maha Shivaratri",
+        "03-03-2026": "Holi",
+        "19-03-2026": "Ugadi",
+        "21-03-2026": "Ramzan / Eid-ul-Fitr",
+        "27-03-2026": "Sri Rama Navami",
+
+        "03-04-2026": "Good Friday",
+        "14-04-2026": "Dr. B.R. Ambedkar Jayanti",
+        "27-05-2026": "Bakrid / Eid-ul-Adha",
+        "26-06-2026": "Muharram",
+
+        "10-08-2026": "Bonalu",
+        "15-08-2026": "Independence Day",
+        "26-08-2026": "Eid Milad-un-Nabi",
+
+        "04-09-2026": "Sri Krishna Janmashtami",
+        "14-09-2026": "Vinayaka Chavithi",
+        "02-10-2026": "Gandhi Jayanti",
+        "20-10-2026": "Vijaya Dasami / Dussehra",
+        "21-10-2026": "Vijaya Dasami Following Day
+
+        "07-11-2026": "Naraka Chaturdashi",
+        "08-11-2026": "Diwali",
+        "24-11-2026": "Karthika Purnima / Guru Nanak Jayanti",
+
+        "25-12-2026": "Christmas",
+        "26-12-2026": "Following Day of Christmas"
 
 };
 
