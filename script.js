@@ -43,7 +43,7 @@ const allHolidays = {
 
         "25-12-2026": "Christmas",
         "26-12-2026": "Following Day of Christmas"
-    },
+    };
 
     2027: {
     
@@ -81,7 +81,7 @@ const allHolidays = {
 
 "25-12-2027": "Christmas",
 "26-12-2027": "Following Day of Christmas"
-    },
+    };
 
 
 2028: {
@@ -115,7 +115,7 @@ const allHolidays = {
     "17-10-2028": "Diwali",
 
     "25-12-2028": "Christmas"
-},
+};
 
     2029: {
 
@@ -147,7 +147,7 @@ const allHolidays = {
     "05-11-2029": "Diwali / Deepavali",
 
     "25-12-2029": "Christmas"
-},
+};
     
 2030: {
 
