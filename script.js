@@ -76,8 +76,9 @@ const allHolidays = {
         "17-05-2027": "Bakrid / Eid-ul-Adha",
         "16-06-2027": "Muharram",
 
-        "15-08-2027": "Independence Day",
-        "15-08-2027": "Eid Milad-un-Nabi",
+        // Same date - two holidays
+        "15-08-2027": "Independence Day / Eid Milad-un-Nabi",
+
         "25-08-2027": "Sri Krishna Janmashtami",
 
         "04-09-2027": "Vinayaka Chavithi",
@@ -114,8 +115,9 @@ const allHolidays = {
 
         "27-03-2028": "Ugadi",
         "03-04-2028": "Sri Rama Navami",
-        "14-04-2028": "Good Friday",
-        "14-04-2028": "Dr. B.R. Ambedkar Jayanti",
+
+        // Same date - two holidays
+        "14-04-2028": "Good Friday / Dr. B.R. Ambedkar Jayanti",
 
         "06-05-2028": "Bakrid / Eid-ul-Adha",
         "04-06-2028": "Muharram",
@@ -189,8 +191,10 @@ const allHolidays = {
 
         "03-04-2030": "Ugadi",
         "12-04-2030": "Sri Rama Navami",
-        "14-04-2030": "Bakrid / Eid-ul-Adha",
-        "14-04-2030": "Dr. B.R. Ambedkar Jayanti",
+
+        // Same date - two holidays
+        "14-04-2030": "Bakrid / Eid-ul-Adha / Dr. B.R. Ambedkar Jayanti",
+
         "19-04-2030": "Good Friday",
 
         "13-05-2030": "Muharram",
@@ -226,6 +230,14 @@ let currentMonth = 0;
 
 
 // ============================================================
+// MINIMUM / MAXIMUM YEAR
+// ============================================================
+
+const MIN_YEAR = 2026;
+const MAX_YEAR = 2030;
+
+
+// ============================================================
 // MONTH NAMES
 // ============================================================
 
@@ -251,11 +263,14 @@ const monthNames = [
 
 function getDateKey(date) {
 
-    const day = String(date.getDate()).padStart(2, "0");
+    const day =
+        String(date.getDate()).padStart(2, "0");
 
-    const month = String(date.getMonth() + 1).padStart(2, "0");
+    const month =
+        String(date.getMonth() + 1).padStart(2, "0");
 
-    const year = date.getFullYear();
+    const year =
+        date.getFullYear();
 
     return `${day}-${month}-${year}`;
 }
@@ -268,13 +283,16 @@ function getDateKey(date) {
 
 function getWeeklyHolidayName(date) {
 
-    const day = date.getDay();
+    const day =
+        date.getDay();
 
-    const dateNumber = date.getDate();
+    const dateNumber =
+        date.getDate();
 
 
     // Sunday
     if (day === 0) {
+
         return "Sunday";
     }
 
@@ -283,12 +301,21 @@ function getWeeklyHolidayName(date) {
     if (day === 6) {
 
         // 2nd Saturday
-        if (dateNumber >= 8 && dateNumber <= 14) {
+        if (
+            dateNumber >= 8 &&
+            dateNumber <= 14
+        ) {
+
             return "2nd Saturday";
         }
 
+
         // 4th Saturday
-        if (dateNumber >= 22 && dateNumber <= 28) {
+        if (
+            dateNumber >= 22 &&
+            dateNumber <= 28
+        ) {
+
             return "4th Saturday";
         }
     }
@@ -304,15 +331,24 @@ function getWeeklyHolidayName(date) {
 
 function getHolidayName(date) {
 
-    const year = date.getFullYear();
+    const year =
+        date.getFullYear();
 
-    const dateKey = getDateKey(date);
+    const dateKey =
+        getDateKey(date);
 
-    const yearHolidays = allHolidays[year] || {};
+    const yearHolidays =
+        allHolidays[year] || {};
 
 
-    // Special holiday first
-    if (yearHolidays[dateKey]) {
+    // Special holiday
+    if (
+        Object.prototype.hasOwnProperty.call(
+            yearHolidays,
+            dateKey
+        )
+    ) {
+
         return yearHolidays[dateKey];
     }
 
@@ -328,19 +364,31 @@ function getHolidayName(date) {
 
 function getHolidayType(date) {
 
-    const year = date.getFullYear();
+    const year =
+        date.getFullYear();
 
-    const dateKey = getDateKey(date);
+    const dateKey =
+        getDateKey(date);
 
-    const yearHolidays = allHolidays[year] || {};
+    const yearHolidays =
+        allHolidays[year] || {};
 
 
-    if (yearHolidays[dateKey]) {
+    if (
+        Object.prototype.hasOwnProperty.call(
+            yearHolidays,
+            dateKey
+        )
+    ) {
+
         return "special";
     }
 
 
-    if (getWeeklyHolidayName(date)) {
+    if (
+        getWeeklyHolidayName(date)
+    ) {
+
         return "weekly";
     }
 
@@ -365,11 +413,12 @@ function isHoliday(date) {
 
 function updateMonthStatistics() {
 
-    const daysInMonth = new Date(
-        currentYear,
-        currentMonth + 1,
-        0
-    ).getDate();
+    const daysInMonth =
+        new Date(
+            currentYear,
+            currentMonth + 1,
+            0
+        ).getDate();
 
 
     let holidays = 0;
@@ -377,13 +426,18 @@ function updateMonthStatistics() {
     let workingDays = 0;
 
 
-    for (let day = 1; day <= daysInMonth; day++) {
+    for (
+        let day = 1;
+        day <= daysInMonth;
+        day++
+    ) {
 
-        const date = new Date(
-            currentYear,
-            currentMonth,
-            day
-        );
+        const date =
+            new Date(
+                currentYear,
+                currentMonth,
+                day
+            );
 
 
         if (isHoliday(date)) {
@@ -398,25 +452,39 @@ function updateMonthStatistics() {
 
 
     const monthTotalDays =
-        document.getElementById("monthTotalDays");
+        document.getElementById(
+            "monthTotalDays"
+        );
 
     const monthHolidays =
-        document.getElementById("monthHolidays");
+        document.getElementById(
+            "monthHolidays"
+        );
 
     const monthWorkingDays =
-        document.getElementById("monthWorkingDays");
+        document.getElementById(
+            "monthWorkingDays"
+        );
 
 
     if (monthTotalDays) {
-        monthTotalDays.textContent = daysInMonth;
+
+        monthTotalDays.textContent =
+            daysInMonth;
     }
+
 
     if (monthHolidays) {
-        monthHolidays.textContent = holidays;
+
+        monthHolidays.textContent =
+            holidays;
     }
 
+
     if (monthWorkingDays) {
-        monthWorkingDays.textContent = workingDays;
+
+        monthWorkingDays.textContent =
+            workingDays;
     }
 }
 
@@ -428,12 +496,16 @@ function updateMonthStatistics() {
 function renderCalendar() {
 
     const calendar =
-        document.getElementById("calendar");
+        document.getElementById(
+            "calendar"
+        );
 
 
     if (!calendar) {
 
-        console.error("Calendar element not found!");
+        console.error(
+            "Calendar element not found!"
+        );
 
         return;
     }
@@ -447,7 +519,9 @@ function renderCalendar() {
     // ========================================================
 
     const monthYear =
-        document.getElementById("monthYear");
+        document.getElementById(
+            "monthYear"
+        );
 
 
     if (monthYear) {
@@ -458,40 +532,50 @@ function renderCalendar() {
 
 
     // ========================================================
-    // FIRST DAY OF MONTH
+    // FIRST DAY
     // ========================================================
 
-    const firstDay = new Date(
-        currentYear,
-        currentMonth,
-        1
-    ).getDay();
+    const firstDay =
+        new Date(
+            currentYear,
+            currentMonth,
+            1
+        ).getDay();
 
 
     // ========================================================
-    // NUMBER OF DAYS
+    // DAYS IN MONTH
     // ========================================================
 
-    const daysInMonth = new Date(
-        currentYear,
-        currentMonth + 1,
-        0
-    ).getDate();
+    const daysInMonth =
+        new Date(
+            currentYear,
+            currentMonth + 1,
+            0
+        ).getDate();
 
 
     // ========================================================
     // EMPTY CELLS
     // ========================================================
 
-    for (let i = 0; i < firstDay; i++) {
+    for (
+        let i = 0;
+        i < firstDay;
+        i++
+    ) {
 
         const emptyDay =
-            document.createElement("div");
+            document.createElement(
+                "div"
+            );
 
         emptyDay.className =
             "day empty-day";
 
-        calendar.appendChild(emptyDay);
+        calendar.appendChild(
+            emptyDay
+        );
     }
 
 
@@ -505,17 +589,21 @@ function renderCalendar() {
         day++
     ) {
 
-        const date = new Date(
-            currentYear,
-            currentMonth,
-            day
-        );
+        const date =
+            new Date(
+                currentYear,
+                currentMonth,
+                day
+            );
 
 
         const dayElement =
-            document.createElement("div");
+            document.createElement(
+                "div"
+            );
 
-        dayElement.className = "day";
+        dayElement.className =
+            "day";
 
 
         // ====================================================
@@ -523,14 +611,19 @@ function renderCalendar() {
         // ====================================================
 
         const numberElement =
-            document.createElement("div");
+            document.createElement(
+                "div"
+            );
 
         numberElement.className =
             "day-number";
 
-        numberElement.textContent = day;
+        numberElement.textContent =
+            day;
 
-        dayElement.appendChild(numberElement);
+        dayElement.appendChild(
+            numberElement
+        );
 
 
         // ====================================================
@@ -546,7 +639,9 @@ function renderCalendar() {
 
         if (holidayName) {
 
-            if (holidayType === "special") {
+            if (
+                holidayType === "special"
+            ) {
 
                 dayElement.classList.add(
                     "special-holiday"
@@ -561,7 +656,9 @@ function renderCalendar() {
 
 
             const holidayElement =
-                document.createElement("div");
+                document.createElement(
+                    "div"
+                );
 
             holidayElement.className =
                 "holiday-name";
@@ -579,7 +676,8 @@ function renderCalendar() {
         // TODAY
         // ====================================================
 
-        const today = new Date();
+        const today =
+            new Date();
 
 
         if (
@@ -588,11 +686,15 @@ function renderCalendar() {
             today.getDate() === day
         ) {
 
-            dayElement.classList.add("today");
+            dayElement.classList.add(
+                "today"
+            );
         }
 
 
-        calendar.appendChild(dayElement);
+        calendar.appendChild(
+            dayElement
+        );
     }
 
 
@@ -618,18 +720,30 @@ function getYearStatistics(year) {
 
 
     const date =
-        new Date(year, 0, 1);
+        new Date(
+            year,
+            0,
+            1
+        );
 
     const endDate =
-        new Date(year + 1, 0, 1);
+        new Date(
+            year + 1,
+            0,
+            1
+        );
 
 
-    while (date < endDate) {
+    while (
+        date < endDate
+    ) {
 
         totalDays++;
 
 
-        if (isHoliday(date)) {
+        if (
+            isHoliday(date)
+        ) {
 
             totalHolidays++;
 
@@ -661,7 +775,8 @@ function getYearStatistics(year) {
 
 function getHolidayProgress(year) {
 
-    const today = new Date();
+    const today =
+        new Date();
 
 
     let completed = 0;
@@ -670,17 +785,31 @@ function getHolidayProgress(year) {
 
 
     const date =
-        new Date(year, 0, 1);
+        new Date(
+            year,
+            0,
+            1
+        );
 
     const endDate =
-        new Date(year + 1, 0, 1);
+        new Date(
+            year + 1,
+            0,
+            1
+        );
 
 
-    while (date < endDate) {
+    while (
+        date < endDate
+    ) {
 
-        if (isHoliday(date)) {
+        if (
+            isHoliday(date)
+        ) {
 
-            if (date < today) {
+            if (
+                date < today
+            ) {
 
                 completed++;
 
@@ -713,18 +842,26 @@ function getHolidayProgress(year) {
 function updateStatistics() {
 
     const stats =
-        getYearStatistics(currentYear);
+        getYearStatistics(
+            currentYear
+        );
 
 
     const progress =
-        getHolidayProgress(currentYear);
+        getHolidayProgress(
+            currentYear
+        );
 
 
     const totalDays =
-        document.getElementById("totalDays");
+        document.getElementById(
+            "totalDays"
+        );
 
     const totalHolidays =
-        document.getElementById("totalHolidays");
+        document.getElementById(
+            "totalHolidays"
+        );
 
     const completedHolidays =
         document.getElementById(
@@ -743,30 +880,35 @@ function updateStatistics() {
 
 
     if (totalDays) {
+
         totalDays.textContent =
             stats.totalDays;
     }
 
 
     if (totalHolidays) {
+
         totalHolidays.textContent =
             stats.totalHolidays;
     }
 
 
     if (completedHolidays) {
+
         completedHolidays.textContent =
             progress.completed;
     }
 
 
     if (remainingHolidays) {
+
         remainingHolidays.textContent =
             progress.remaining;
     }
 
 
     if (workingDays) {
+
         workingDays.textContent =
             stats.workingDays;
     }
@@ -779,23 +921,37 @@ function updateStatistics() {
 
 function changeYear(year) {
 
-    year = Number(year);
+    year =
+        Number(year);
 
 
-    // Only allow 2026 - 2030
-    if (year < 2026) {
-        year = 2026;
+    // Minimum year
+    if (
+        year < MIN_YEAR
+    ) {
+
+        year =
+            MIN_YEAR;
     }
 
 
-    if (year > 2030) {
-        year = 2030;
+    // Maximum year
+    if (
+        year > MAX_YEAR
+    ) {
+
+        year =
+            MAX_YEAR;
     }
 
 
-    currentYear = year;
+    currentYear =
+        year;
 
-    currentMonth = 0;
+
+    // Every year starts from January
+    currentMonth =
+        0;
 
 
     renderCalendar();
@@ -818,24 +974,32 @@ function updateYearButtons() {
         );
 
 
-    buttons.forEach(button => {
+    buttons.forEach(
+        button => {
 
-        const buttonYear =
-            Number(
-                button.textContent.trim()
-            );
+            const buttonYear =
+                Number(
+                    button.textContent.trim()
+                );
 
 
-        if (buttonYear === currentYear) {
+            if (
+                buttonYear === currentYear
+            ) {
 
-            button.classList.add("active");
+                button.classList.add(
+                    "active"
+                );
 
-        } else {
+            } else {
 
-            button.classList.remove("active");
+                button.classList.remove(
+                    "active"
+                );
+            }
+
         }
-
-    });
+    );
 }
 
 
@@ -848,20 +1012,31 @@ function previousMonth() {
     currentMonth--;
 
 
-    if (currentMonth < 0) {
+    // Move to previous year
+    if (
+        currentMonth < 0
+    ) {
 
-        currentMonth = 11;
+        currentMonth =
+            11;
 
         currentYear--;
     }
 
 
-    // Minimum: January 2026
-    if (currentYear < 2026) {
+    // ========================================================
+    // MINIMUM: JANUARY 2026
+    // ========================================================
 
-        currentYear = 2026;
+    if (
+        currentYear < MIN_YEAR
+    ) {
 
-        currentMonth = 0;
+        currentYear =
+            MIN_YEAR;
+
+        currentMonth =
+            0;
     }
 
 
@@ -882,66 +1057,21 @@ function nextMonth() {
     currentMonth++;
 
 
-    if (currentMonth > 11) {
+    // Move to next year
+    if (
+        currentMonth > 11
+    ) {
 
-        currentMonth = 0;
+        currentMonth =
+            0;
 
         currentYear++;
     }
 
 
-    // Maximum: December 2030
-    if (currentYear > 2030) {
+    // ========================================================
+    // MAXIMUM: DECEMBER 2030
+    // ========================================================
 
-        currentYear = 2030;
-
-        currentMonth = 11;
-    }
-
-
-    renderCalendar();
-
-    updateStatistics();
-
-    updateYearButtons();
-}
-
-
-// ============================================================
-// INITIAL LOAD
-// ============================================================
-
-document.addEventListener(
-    "DOMContentLoaded",
-    function () {
-
-        console.log(
-            "MGIT Holiday Calendar Loaded"
-        );
-
-
-        // Safety check
-        if (currentYear < 2026) {
-
-            currentYear = 2026;
-
-            currentMonth = 0;
-        }
-
-
-        if (currentYear > 2030) {
-
-            currentYear = 2030;
-
-            currentMonth = 11;
-        }
-
-
-        renderCalendar();
-
-        updateStatistics();
-
-        updateYearButtons();
-
-    }
-);
+    if (
+       
