@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MGIT 2026 - 2030 Holiday Calendar</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="calendar-header">
+        <h1>MAHATMA GANDHI INSTITUTE OF TECHNOLOGY</h1>
+        <p>Kokapet</p>
+        <h2>2026 - 2030 HOLIDAY CALENDAR</h2>
+    </header>
+
+
+    <!-- YEAR SELECTOR -->
+    <section class="year-selector">
+
+        <button onclick="changeYear(2026)">2026</button>
+        <button onclick="changeYear(2027)">2027</button>
+        <button onclick="changeYear(2028)">2028</button>
+        <button onclick="changeYear(2029)">2029</button>
+        <button onclick="changeYear(2030)">2030</button>
+
+    </section>
+
+
+    <!-- YEAR SUMMARY -->
+    <section class="statistics">
+
+        <div class="stat-card">
+            <span>Total Days</span>
+            <strong id="totalDays">0</strong>
+        </div>
+
+        <div class="stat-card holiday-card">
+            <span>Total Holidays</span>
+            <strong id="totalHolidays">0</strong>
+        </div>
+
+        <div class="stat-card completed-card">
+            <span>Completed Holidays</span>
+            <strong id="completedHolidays">0</strong>
+        </div>
+
+        <div class="stat-card remaining-card">
+            <span>Remaining Holidays</span>
+            <strong id="remainingHolidays">0</strong>
+        </div>
+
+        <div class="stat-card">
+            <span>Working Days</span>
+            <strong id="workingDays">0</strong>
+        </div>
+
+    </section>
+
+
+    <!-- CALENDAR -->
+    <main>
+
+        <div class="calendar-title">
+
+            <button onclick="previousMonth()">‹</button>
+
+            <div class="month-info">
+
+                <h2 id="monthYear">January 2026</h2>
+
+                <div class="month-stats">
+
+                    <div>
+                        <span>Total Days</span>
+                        <strong id="monthTotalDays">0</strong>
+                    </div>
+
+                    <div>
+                        <span>Holidays</span>
+                        <strong id="monthHolidays">0</strong>
+                    </div>
+
+                    <div>
+                        <span>Working Days</span>
+                        <strong id="monthWorkingDays">0</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <button onclick="nextMonth()">›</button>
+
+        </div>
+
+
+        <!-- WEEK DAYS -->
+        <div class="calendar-weekdays">
+
+            <div>Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
+
+        </div>
+
+
+        <!-- DAYS -->
+        <div id="calendar" class="calendar-grid"></div>
+
+    </main>
+
+
+    <!-- LEGEND -->
+    <section class="legend">
+
+        <div>
+            <span class="legend-box holiday"></span>
+            Special Holiday
+        </div>
+
+        <div>
+            <span class="legend-box weekly"></span>
+            Sunday / 2nd / 4th Saturday
+        </div>
+
+        <div>
+            <span class="legend-box working"></span>
+            Working Day
+        </div>
+
+        <div>
+            <span class="legend-box today-box"></span>
+            Today
+        </div>
+
+    </section>
+
+
+    <footer>
+        <p>MAHATMA GANDHI INSTITUTE OF TECHNOLOGY - Kokapet</p>
+        <p>Holiday Calendar 2026 - 2030</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

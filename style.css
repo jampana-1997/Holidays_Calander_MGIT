@@ -1,0 +1,448 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f9;
+    color: #222;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.calendar-header {
+    text-align: center;
+    background: white;
+    padding: 30px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.calendar-header h1 {
+    margin: 0;
+    font-size: 29px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.calendar-header p {
+    margin: 7px 0;
+    color: #555;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.calendar-header h2 {
+    margin: 10px 0 0;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   YEAR BUTTONS
+========================================================= */
+
+.year-selector {
+    max-width: 1200px;
+    margin: auto;
+    padding: 22px 20px;
+
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.year-selector button {
+    border: none;
+    padding: 11px 25px;
+    border-radius: 8px;
+
+    background: #e5e7eb;
+    color: #222;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.year-selector button:hover {
+    background: #d1d5db;
+}
+
+.year-selector button.active {
+    background: #222;
+    color: white;
+}
+
+
+/* =========================================================
+   YEAR STATISTICS
+========================================================= */
+
+.statistics {
+    max-width: 1200px;
+    margin: 0 auto 25px;
+    padding: 0 20px;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.stat-card span {
+    display: block;
+    color: #666;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.stat-card strong {
+    font-size: 29px;
+}
+
+.holiday-card {
+    border-top: 4px solid #28a745;
+}
+
+.completed-card {
+    border-top: 4px solid #198754;
+}
+
+.remaining-card {
+    border-top: 4px solid #ffc107;
+}
+
+
+/* =========================================================
+   CALENDAR CONTAINER
+========================================================= */
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 25px;
+
+    background: white;
+    border-radius: 14px;
+
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+}
+
+
+/* =========================================================
+   MONTH HEADER
+========================================================= */
+
+.calendar-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 22px;
+}
+
+.calendar-title > button {
+    width: 44px;
+    height: 44px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #222;
+    color: white;
+
+    font-size: 27px;
+    cursor: pointer;
+}
+
+.month-info {
+    text-align: center;
+}
+
+.month-info h2 {
+    margin: 0 0 12px;
+    font-size: 24px;
+}
+
+
+/* =========================================================
+   MONTH STATISTICS
+========================================================= */
+
+.month-stats {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.month-stats div {
+    min-width: 115px;
+
+    padding: 9px 14px;
+
+    background: #f4f6f9;
+    border-radius: 8px;
+}
+
+.month-stats span {
+    display: block;
+
+    color: #666;
+    font-size: 11px;
+
+    margin-bottom: 4px;
+}
+
+.month-stats strong {
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   WEEK DAYS
+========================================================= */
+
+.calendar-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+
+    margin-bottom: 6px;
+}
+
+.calendar-weekdays div {
+    padding: 12px 5px;
+
+    text-align: center;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    background: #f1f3f5;
+
+    border-radius: 6px;
+}
+
+
+/* =========================================================
+   CALENDAR GRID
+========================================================= */
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+}
+
+.day {
+    min-height: 105px;
+
+    padding: 10px;
+
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+
+    background: white;
+
+    position: relative;
+}
+
+.day-number {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.holiday-name {
+    margin-top: 8px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    line-height: 1.35;
+}
+
+
+/* =========================================================
+   HOLIDAY COLORS
+========================================================= */
+
+.day.special-holiday {
+    background: #d9f7df;
+    border: 1px solid #65c77a;
+}
+
+.day.weekly-holiday {
+    background: #d9f7df;
+    border: 1px solid #65c77a;
+}
+
+
+/* =========================================================
+   TODAY
+========================================================= */
+
+.day.today {
+    outline: 3px solid #222;
+}
+
+
+/* =========================================================
+   LEGEND
+========================================================= */
+
+.legend {
+    max-width: 1200px;
+
+    margin: 20px auto;
+
+    padding: 0 20px;
+
+    display: flex;
+    justify-content: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+}
+
+.legend div {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    font-size: 14px;
+}
+
+.legend-box {
+    width: 18px;
+    height: 18px;
+
+    display: inline-block;
+
+    border-radius: 4px;
+}
+
+.legend-box.holiday,
+.legend-box.weekly {
+    background: #d9f7df;
+    border: 1px solid #65c77a;
+}
+
+.legend-box.working {
+    background: white;
+    border: 1px solid #ccc;
+}
+
+.legend-box.today-box {
+    background: white;
+    border: 3px solid #222;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    text-align: center;
+
+    padding: 25px 15px;
+
+    color: #666;
+
+    font-size: 13px;
+}
+
+footer p {
+    margin: 4px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .statistics {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .calendar-header h1 {
+        font-size: 20px;
+    }
+
+    .calendar-header h2 {
+        font-size: 17px;
+    }
+
+    .statistics {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        padding: 12px;
+    }
+
+    .month-stats {
+        gap: 5px;
+    }
+
+    .month-stats div {
+        min-width: 85px;
+        padding: 7px 5px;
+    }
+
+    .month-stats strong {
+        font-size: 16px;
+    }
+
+    .month-info h2 {
+        font-size: 19px;
+    }
+
+    .day {
+        min-height: 75px;
+        padding: 6px;
+    }
+
+    .day-number {
+        font-size: 14px;
+    }
+
+    .holiday-name {
+        font-size: 9px;
+    }
+
+    .calendar-weekdays div {
+        font-size: 11px;
+        padding: 8px 2px;
+    }
+
+}
