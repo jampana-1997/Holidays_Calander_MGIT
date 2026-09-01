@@ -1,1163 +1,258 @@
+// ============================================================  
+  
+// MGIT HOLIDAY CALENDAR  
+  
+// 2026 - 2030  
+  
+// ============================================================  
+  
+// ============================================================  
+  
+// 2026 HOLIDAYS  
+  
+// ============================================================  
+  
+const holidays2026 = {  
+  
+"01-01-2026": "New Year",  
+  
+"14-01-2026": "Bhogi",  
+  
+"15-01-2026": "Sankranti / Pongal",  
+  
+"16-01-2026": "Kanumu",  
+  
+"26-01-2026": "Republic Day",  
+  
+  
+  
+"15-02-2026": "Maha Shivaratri",  
+  
+"03-03-2026": "Holi",  
+  
+"19-03-2026": "Ugadi",  
+  
+"21-03-2026": "Ramzan / Eid-ul-Fitr",  
+  
+"27-03-2026": "Sri Rama Navami",  
+  
+  
+  
+"03-04-2026": "Good Friday",  
+  
+"14-04-2026": "Dr. B.R. Ambedkar Jayanti",  
+  
+"27-05-2026": "Bakrid / Eid-ul-Adha",  
+  
+"26-06-2026": "Muharram",  
+  
+  
+  
+"10-08-2026": "Bonalu",  
+  
+"15-08-2026": "Independence Day",  
+  
+"26-08-2026": "Eid Milad-un-Nabi",  
+  
+  
+  
+"04-09-2026": "Sri Krishna Janmashtami",  
+  
+"14-09-2026": "Vinayaka Chavithi",  
+  
+"02-10-2026": "Gandhi Jayanti",  
+  
+"20-10-2026": "Vijaya Dasami / Dussehra",  
+  
+"21-10-2026": "Vijaya Dasami Following Day",  
+  
+  
+  
+"07-11-2026": "Naraka Chaturdashi",  
+  
+"08-11-2026": "Diwali",  
+  
+"24-11-2026": "Karthika Purnima / Guru Nanak Jayanti",  
+  
+  
+  
+"25-12-2026": "Christmas",  
+  
+"26-12-2026": "Following Day of Christmas"  
+  
+};  
+  
+// ============================================================  
+  // ============================================================
+// 2027 HOLIDAYS
 // ============================================================
-// MGIT HOLIDAY CALENDAR
-// 2026 - 2030
-// ============================================================
 
+const holidays2027 = {
 
-// ============================================================
-// HOLIDAY DATA
-// ============================================================
+    "01-01-2027": "New Year",
+    "13-01-2027": "Bhogi",
+    "14-01-2027": "Sankranti / Pongal",
+    "26-01-2027": "Republic Day",
 
-const allHolidays = {
+    "06-03-2027": "Maha Shivaratri",
+    "10-03-2027": "Ramzan / Eid-ul-Fitr",
+    "11-03-2027": "Following Day of Ramzan",
+    "22-03-2027": "Holi",
+    "26-03-2027": "Good Friday",
 
-    // ==========================================================
-    // 2026
-    // ==========================================================
+    "05-04-2027": "Babu Jagjivan Ram Jayanti",
+    "08-04-2027": "Ugadi",
+    "14-04-2027": "Dr. B.R. Ambedkar Jayanti",
+    "15-04-2027": "Sri Rama Navami",
 
-    2026: {
+    "17-05-2027": "Bakrid / Eid-ul-Adha",
+    "16-06-2027": "Muharram",
 
-        "01-01-2026": "New Year",
-        "14-01-2026": "Bhogi",
-        "15-01-2026": "Sankranti / Pongal",
-        "16-01-2026": "Kanumu",
-        "26-01-2026": "Republic Day",
+    "02-08-2027": "Bonalu",
+    "15-08-2027": "Independence Day",
+    "15-08-2027": "Eid Milad-un-Nabi",
+    "25-08-2027": "Sri Krishna Janmashtami",
 
-        "15-02-2026": "Maha Shivaratri",
-        "03-03-2026": "Holi",
-        "19-03-2026": "Ugadi",
-        "21-03-2026": "Ramzan / Eid-ul-Fitr",
-        "27-03-2026": "Sri Rama Navami",
+    "04-09-2027": "Vinayaka Chavithi",
+    "30-09-2027": "Bathukamma Starting Day",
 
-        "03-04-2026": "Good Friday",
-        "14-04-2026": "Dr. B.R. Ambedkar Jayanti",
-        "27-05-2026": "Bakrid / Eid-ul-Adha",
-        "26-06-2026": "Muharram",
+    "02-10-2027": "Gandhi Jayanti",
+    "08-10-2027": "Durga Ashtami",
+    "09-10-2027": "Maha Navami",
+    "10-10-2027": "Vijaya Dasami / Dussehra",
 
-        "10-08-2026": "Bonalu",
-        "15-08-2026": "Independence Day",
-        "26-08-2026": "Eid Milad-un-Nabi",
+    "29-10-2027": "Deepavali",
+    "14-11-2027": "Karthika Purnima / Guru Nanak Jayanti",
 
-        "04-09-2026": "Sri Krishna Janmashtami",
-        "14-09-2026": "Vinayaka Chavithi",
-        "02-10-2026": "Gandhi Jayanti",
-        "20-10-2026": "Vijaya Dasami / Dussehra",
-        "21-10-2026": "Vijaya Dasami Following Day",
-
-        "07-11-2026": "Naraka Chaturdashi",
-        "08-11-2026": "Diwali",
-        "24-11-2026": "Karthika Purnima / Guru Nanak Jayanti",
-
-        "25-12-2026": "Christmas",
-        "26-12-2026": "Following Day of Christmas"
-    },
-
-
-    // ==========================================================
-    // 2027
-    // ==========================================================
-
-    2027: {
-
-        "01-01-2027": "New Year",
-        "14-01-2027": "Bhogi",
-        "15-01-2027": "Sankranti / Pongal",
-        "16-01-2027": "Kanumu",
-        "26-01-2027": "Republic Day",
-
-        "06-03-2027": "Maha Shivaratri",
-        "10-03-2027": "Ramzan / Eid-ul-Fitr",
-        "22-03-2027": "Holi",
-
-        "26-03-2027": "Good Friday",
-        "07-04-2027": "Ugadi",
-        "14-04-2027": "Dr. B.R. Ambedkar Jayanti",
-        "15-04-2027": "Sri Rama Navami",
-
-        "17-05-2027": "Bakrid / Eid-ul-Adha",
-        "16-06-2027": "Muharram",
-
-        "15-08-2027": "Independence Day / Eid Milad-un-Nabi",
-
-        "25-08-2027": "Sri Krishna Janmashtami",
-        "04-09-2027": "Vinayaka Chavithi",
-
-        "02-10-2027": "Gandhi Jayanti",
-        "09-10-2027": "Vijaya Dasami / Dussehra",
-
-        "28-10-2027": "Naraka Chaturdashi",
-        "29-10-2027": "Diwali",
-
-        "24-11-2027": "Karthika Purnima / Guru Nanak Jayanti",
-
-        "25-12-2027": "Christmas",
-        "26-12-2027": "Following Day of Christmas"
-    },
-
-
-    // ==========================================================
-    // 2028
-    // ==========================================================
-
-    2028: {
-
-        "01-01-2028": "New Year",
-
-        "14-01-2028": "Bhogi",
-        "15-01-2028": "Sankranti / Pongal",
-        "16-01-2028": "Kanumu",
-        "26-01-2028": "Republic Day",
-
-        "23-02-2028": "Maha Shivaratri",
-        "27-02-2028": "Ramzan / Eid-ul-Fitr",
-        "11-03-2028": "Holi",
-
-        "27-03-2028": "Ugadi",
-        "03-04-2028": "Sri Rama Navami",
-
-        "14-04-2028": "Good Friday / Dr. B.R. Ambedkar Jayanti",
-
-        "06-05-2028": "Bakrid / Eid-ul-Adha",
-        "04-06-2028": "Muharram",
-
-        "13-08-2028": "Sri Krishna Janmashtami",
-        "15-08-2028": "Independence Day",
-        "23-08-2028": "Vinayaka Chavithi",
-
-        "27-09-2028": "Vijaya Dasami / Dussehra",
-        "02-10-2028": "Gandhi Jayanti",
-
-        "17-10-2028": "Diwali",
-
-        "25-12-2028": "Christmas"
-    },
-
-
-    // ==========================================================
-    // 2029
-    // ==========================================================
-
-    2029: {
-
-        "01-01-2029": "New Year",
-
-        "13-01-2029": "Bhogi",
-        "14-01-2029": "Sankranti / Pongal",
-        "15-01-2029": "Kanumu",
-        "26-01-2029": "Republic Day",
-
-        "11-02-2029": "Maha Shivaratri",
-        "15-02-2029": "Ramzan / Eid-ul-Fitr",
-        "01-03-2029": "Holi",
-
-        "30-03-2029": "Good Friday",
-        "14-04-2029": "Ugadi / Dr. B.R. Ambedkar Jayanti",
-        "23-04-2029": "Sri Rama Navami",
-
-        "24-04-2029": "Bakrid / Eid-ul-Adha",
-        "25-05-2029": "Muharram",
-
-        "15-08-2029": "Independence Day",
-        "01-09-2029": "Sri Krishna Janmashtami",
-        "11-09-2029": "Vinayaka Chavithi",
-
-        "02-10-2029": "Gandhi Jayanti",
-        "16-10-2029": "Vijaya Dasami / Dussehra",
-
-        "05-11-2029": "Diwali / Deepavali",
-
-        "25-12-2029": "Christmas"
-    },
-
-
-    // ==========================================================
-    // 2030
-    // ==========================================================
-
-    2030: {
-
-        "01-01-2030": "New Year",
-
-        "13-01-2030": "Bhogi",
-        "14-01-2030": "Sankranti / Pongal",
-        "15-01-2030": "Kanumu",
-        "26-01-2030": "Republic Day",
-
-        "02-03-2030": "Maha Shivaratri",
-        "05-02-2030": "Ramzan / Eid-ul-Fitr",
-        "20-03-2030": "Holi",
-
-        "03-04-2030": "Ugadi",
-        "12-04-2030": "Sri Rama Navami",
-
-        "14-04-2030": "Bakrid / Eid-ul-Adha / Dr. B.R. Ambedkar Jayanti",
-
-        "19-04-2030": "Good Friday",
-
-        "13-05-2030": "Muharram",
-
-        "13-07-2030": "Eid Milad-un-Nabi",
-        "28-07-2030": "Bonalu",
-        "15-08-2030": "Independence Day",
-        "21-08-2030": "Sri Krishna Janmashtami",
-
-        "01-09-2030": "Vinayaka Chavithi",
-
-        "02-10-2030": "Gandhi Jayanti",
-        "06-10-2030": "Vijaya Dasami / Dussehra",
-
-        "25-10-2030": "Naraka Chaturdashi",
-        "26-10-2030": "Diwali",
-
-        "10-11-2030": "Karthika Purnima / Guru Nanak Jayanti",
-
-        "25-12-2030": "Christmas",
-        "26-12-2030": "Following Day of Christmas"
-    }
+    "25-12-2027": "Christmas",
+    "26-12-2027": "Following Day of Christmas"
 
 };
 
 
 // ============================================================
-// CURRENT YEAR / MONTH
+// 2028 HOLIDAYS
 // ============================================================
 
-let currentYear = 2026;
-let currentMonth = 0;
+const holidays2028 = {
 
+    "01-01-2028": "New Year",
+    "14-01-2028": "Bhogi",
+    "15-01-2028": "Sankranti / Pongal",
+    "26-01-2028": "Republic Day",
 
-// ============================================================
-// YEAR LIMITS
-// ============================================================
+    "23-02-2028": "Maha Shivaratri",
+    "26-02-2028": "Ramzan / Eid-ul-Fitr",
+    "11-03-2028": "Holi",
 
-const MIN_YEAR = 2026;
-const MAX_YEAR = 2030;
+    "27-03-2028": "Ugadi",
+    "05-04-2028": "Babu Jagjivan Ram Jayanti",
+    "14-04-2028": "Dr. B.R. Ambedkar Jayanti / Good Friday",
 
+    "05-05-2028": "Bakrid / Eid-ul-Adha",
+    "04-06-2028": "Muharram",
 
-// ============================================================
-// MONTH NAMES
-// ============================================================
+    "25-07-2028": "Bonalu",
+    "03-08-2028": "Eid Milad-un-Nabi",
+    "15-08-2028": "Independence Day",
+    "13-08-2028": "Sri Krishna Janmashtami",
 
-const monthNames = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December"
-];
+    "23-08-2028": "Vinayaka Chavithi",
+    "18-09-2028": "Bathukamma Starting Day",
 
+    "28-09-2028": "Vijaya Dasami / Dussehra",
+    "29-09-2028": "Durga Puja Holiday",
+    "02-10-2028": "Gandhi Jayanti",
 
-// ============================================================
-// GET DATE KEY
-// ============================================================
+    "17-10-2028": "Deepavali",
+    "02-11-2028": "Karthika Purnima / Guru Nanak Jayanti",
 
-function getDateKey(date) {
+    "25-12-2028": "Christmas"
 
-    const day =
-        String(date.getDate()).padStart(2, "0");
-
-    const month =
-        String(date.getMonth() + 1).padStart(2, "0");
-
-    const year =
-        date.getFullYear();
-
-    return `${day}-${month}-${year}`;
-}
+};
 
 
 // ============================================================
-// WEEKLY HOLIDAY
-// Sunday + 2nd Saturday + 4th Saturday
+// 2029 HOLIDAYS
 // ============================================================
 
-function getWeeklyHolidayName(date) {
+const holidays2029 = {
 
-    const day =
-        date.getDay();
+    "01-01-2029": "New Year",
+    "14-01-2029": "Bhogi",
+    "15-01-2029": "Sankranti / Pongal",
+    "26-01-2029": "Republic Day",
 
-    const dateNumber =
-        date.getDate();
+    "12-02-2029": "Maha Shivaratri",
+    "15-02-2029": "Ramzan / Eid-ul-Fitr",
+    "01-03-2029": "Holi",
 
+    "16-03-2029": "Ugadi",
+    "21-03-2029": "Sri Rama Navami",
+    "14-04-2029": "Dr. B.R. Ambedkar Jayanti",
+    "20-04-2029": "Good Friday",
 
-    // Sunday
-    if (day === 0) {
-        return "Sunday";
-    }
+    "25-04-2029": "Bakrid / Eid-ul-Adha",
+    "24-05-2029": "Muharram",
 
+    "16-07-2029": "Bonalu",
+    "12-08-2029": "Independence Day",
+    "12-08-2029": "Eid Milad-un-Nabi",
+    "31-08-2029": "Sri Krishna Janmashtami",
 
-    // Saturday
-    if (day === 6) {
+    "12-09-2029": "Vinayaka Chavithi",
+    "07-10-2029": "Bathukamma Starting Day",
 
-        // 2nd Saturday
-        if (
-            dateNumber >= 8 &&
-            dateNumber <= 14
-        ) {
-            return "2nd Saturday";
-        }
+    "02-10-2029": "Gandhi Jayanti",
+    "05-10-2029": "Durga Ashtami",
+    "06-10-2029": "Vijaya Dasami / Dussehra",
 
+    "05-11-2029": "Deepavali",
+    "21-11-2029": "Karthika Purnima / Guru Nanak Jayanti",
 
-        // 4th Saturday
-        if (
-            dateNumber >= 22 &&
-            dateNumber <= 28
-        ) {
-            return "4th Saturday";
-        }
-    }
+    "25-12-2029": "Christmas"
 
-
-    return null;
-}
+};
 
 
 // ============================================================
-// GET HOLIDAY NAME
+// 2030 HOLIDAYS
 // ============================================================
 
-function getHolidayName(date) {
+const holidays2030 = {
 
-    const year =
-        date.getFullYear();
+    "01-01-2030": "New Year",
+    "14-01-2030": "Bhogi",
+    "15-01-2030": "Sankranti / Pongal",
+    "26-01-2030": "Republic Day",
 
-    const dateKey =
-        getDateKey(date);
+    "02-02-2030": "Maha Shivaratri",
+    "05-02-2030": "Ramzan / Eid-ul-Fitr",
+    "20-03-2030": "Holi",
 
-    const yearHolidays =
-        allHolidays[year] || {};
+    "05-04-2030": "Ugadi",
+    "11-04-2030": "Sri Rama Navami",
+    "14-04-2030": "Dr. B.R. Ambedkar Jayanti",
+    "12-04-2030": "Good Friday",
 
+    "15-04-2030": "Bakrid / Eid-ul-Adha",
+    "13-05-2030": "Muharram",
 
-    // Special holiday
-    if (
-        Object.prototype.hasOwnProperty.call(
-            yearHolidays,
-            dateKey
-        )
-    ) {
+    "01-07-2030": "Bonalu",
+    "15-08-2030": "Independence Day",
+    "15-08-2030": "Eid Milad-un-Nabi",
+    "21-08-2030": "Sri Krishna Janmashtami",
 
-        return yearHolidays[dateKey];
-    }
+    "03-09-2030": "Vinayaka Chavithi",
+    "28-09-2030": "Bathukamma Starting Day",
 
+    "02-10-2030": "Gandhi Jayanti",
+    "25-09-2030": "Durga Ashtami",
+    "26-09-2030": "Vijaya Dasami / Dussehra",
 
-    // Weekly holiday
-    return getWeeklyHolidayName(date);
-}
+    "26-10-2030": "Deepavali",
+    "10-11-2030": "Karthika Purnima / Guru Nanak Jayanti",
 
+    "25-12-2030": "Christmas"
 
-// ============================================================
-// GET HOLIDAY TYPE
-// ============================================================
-
-function getHolidayType(date) {
-
-    const year =
-        date.getFullYear();
-
-    const dateKey =
-        getDateKey(date);
-
-    const yearHolidays =
-        allHolidays[year] || {};
-
-
-    // Special holiday
-    if (
-        Object.prototype.hasOwnProperty.call(
-            yearHolidays,
-            dateKey
-        )
-    ) {
-
-        return "special";
-    }
-
-
-    // Weekly holiday
-    if (
-        getWeeklyHolidayName(date)
-    ) {
-
-        return "weekly";
-    }
-
-
-    return "working";
-}
-
-
-// ============================================================
-// IS HOLIDAY
-// ============================================================
-
-function isHoliday(date) {
-
-    return getHolidayName(date) !== null;
-}
-
-
-// ============================================================
-// MONTH STATISTICS
-// ============================================================
-
-function updateMonthStatistics() {
-
-    const daysInMonth =
-        new Date(
-            currentYear,
-            currentMonth + 1,
-            0
-        ).getDate();
-
-
-    let holidays = 0;
-
-    let workingDays = 0;
-
-
-    for (
-        let day = 1;
-        day <= daysInMonth;
-        day++
-    ) {
-
-        const date =
-            new Date(
-                currentYear,
-                currentMonth,
-                day
-            );
-
-
-        if (isHoliday(date)) {
-
-            holidays++;
-
-        } else {
-
-            workingDays++;
-        }
-    }
-
-
-    const monthTotalDays =
-        document.getElementById(
-            "monthTotalDays"
-        );
-
-    const monthHolidays =
-        document.getElementById(
-            "monthHolidays"
-        );
-
-    const monthWorkingDays =
-        document.getElementById(
-            "monthWorkingDays"
-        );
-
-
-    if (monthTotalDays) {
-
-        monthTotalDays.textContent =
-            daysInMonth;
-    }
-
-
-    if (monthHolidays) {
-
-        monthHolidays.textContent =
-            holidays;
-    }
-
-
-    if (monthWorkingDays) {
-
-        monthWorkingDays.textContent =
-            workingDays;
-    }
-}
-
-
-// ============================================================
-// RENDER CALENDAR
-// ============================================================
-
-function renderCalendar() {
-
-    const calendar =
-        document.getElementById(
-            "calendar"
-        );
-
-
-    if (!calendar) {
-
-        console.error(
-            "Calendar element not found!"
-        );
-
-        return;
-    }
-
-
-    calendar.innerHTML = "";
-
-
-    // ========================================================
-    // MONTH TITLE
-    // ========================================================
-
-    const monthYear =
-        document.getElementById(
-            "monthYear"
-        );
-
-
-    if (monthYear) {
-
-        monthYear.textContent =
-            `${monthNames[currentMonth]} ${currentYear}`;
-    }
-
-
-    // ========================================================
-    // FIRST DAY OF MONTH
-    // ========================================================
-
-    const firstDay =
-        new Date(
-            currentYear,
-            currentMonth,
-            1
-        ).getDay();
-
-
-    // ========================================================
-    // DAYS IN MONTH
-    // ========================================================
-
-    const daysInMonth =
-        new Date(
-            currentYear,
-            currentMonth + 1,
-            0
-        ).getDate();
-
-
-    // ========================================================
-    // EMPTY CELLS
-    // ========================================================
-
-    for (
-        let i = 0;
-        i < firstDay;
-        i++
-    ) {
-
-        const emptyDay =
-            document.createElement(
-                "div"
-            );
-
-        emptyDay.className =
-            "day empty-day";
-
-        calendar.appendChild(
-            emptyDay
-        );
-    }
-
-
-    // ========================================================
-    // CREATE CALENDAR DAYS
-    // ========================================================
-
-    for (
-        let day = 1;
-        day <= daysInMonth;
-        day++
-    ) {
-
-        const date =
-            new Date(
-                currentYear,
-                currentMonth,
-                day
-            );
-
-
-        const dayElement =
-            document.createElement(
-                "div"
-            );
-
-        dayElement.className =
-            "day";
-
-
-        // ====================================================
-        // DAY NUMBER
-        // ====================================================
-
-        const numberElement =
-            document.createElement(
-                "div"
-            );
-
-        numberElement.className =
-            "day-number";
-
-        numberElement.textContent =
-            day;
-
-        dayElement.appendChild(
-            numberElement
-        );
-
-
-        // ====================================================
-        // HOLIDAY
-        // ====================================================
-
-        const holidayName =
-            getHolidayName(date);
-
-        const holidayType =
-            getHolidayType(date);
-
-
-        if (holidayName) {
-
-            if (
-                holidayType === "special"
-            ) {
-
-                dayElement.classList.add(
-                    "special-holiday"
-                );
-
-            } else {
-
-                dayElement.classList.add(
-                    "weekly-holiday"
-                );
-            }
-
-
-            const holidayElement =
-                document.createElement(
-                    "div"
-                );
-
-            holidayElement.className =
-                "holiday-name";
-
-            holidayElement.textContent =
-                holidayName;
-
-            dayElement.appendChild(
-                holidayElement
-            );
-        }
-
-
-        // ====================================================
-        // TODAY
-        // ====================================================
-
-        const today =
-            new Date();
-
-
-        if (
-            today.getFullYear() === currentYear &&
-            today.getMonth() === currentMonth &&
-            today.getDate() === day
-        ) {
-
-            dayElement.classList.add(
-                "today"
-            );
-        }
-
-
-        // ====================================================
-        // ADD DAY TO CALENDAR
-        // ====================================================
-
-        calendar.appendChild(
-            dayElement
-        );
-    }
-
-
-    // ========================================================
-    // UPDATE MONTH STATISTICS
-    // ========================================================
-
-    updateMonthStatistics();
-}
-
-
-// ============================================================
-// YEAR STATISTICS
-// ============================================================
-
-function getYearStatistics(year) {
-
-    let totalDays = 0;
-
-    let totalHolidays = 0;
-
-    let workingDays = 0;
-
-
-    const date =
-        new Date(
-            year,
-            0,
-            1
-        );
-
-    const endDate =
-        new Date(
-            year + 1,
-            0,
-            1
-        );
-
-
-    while (
-        date < endDate
-    ) {
-
-        totalDays++;
-
-
-        if (
-            isHoliday(date)
-        ) {
-
-            totalHolidays++;
-
-        } else {
-
-            workingDays++;
-        }
-
-
-        date.setDate(
-            date.getDate() + 1
-        );
-    }
-
-
-    return {
-
-        totalDays:
-            totalDays,
-
-        totalHolidays:
-            totalHolidays,
-
-        workingDays:
-            workingDays
-
-    };
-}
-
-
-// ============================================================
-// HOLIDAY PROGRESS
-// ============================================================
-
-function getHolidayProgress(year) {
-
-    const today =
-        new Date();
-
-
-    let completed = 0;
-
-    let remaining = 0;
-
-
-    const date =
-        new Date(
-            year,
-            0,
-            1
-        );
-
-    const endDate =
-        new Date(
-            year + 1,
-            0,
-            1
-        );
-
-
-    while (
-        date < endDate
-    ) {
-
-        if (
-            isHoliday(date)
-        ) {
-
-            if (
-                date < today
-            ) {
-
-                completed++;
-
-            } else {
-
-                remaining++;
-            }
-        }
-
-
-        date.setDate(
-            date.getDate() + 1
-        );
-    }
-
-
-    return {
-
-        completed:
-            completed,
-
-        remaining:
-            remaining
-
-    };
-}
-
-
-// ============================================================
-// UPDATE YEAR STATISTICS
-// ============================================================
-
-function updateStatistics() {
-
-    const stats =
-        getYearStatistics(
-            currentYear
-        );
-
-
-    const progress =
-        getHolidayProgress(
-            currentYear
-        );
-
-
-    const totalDays =
-        document.getElementById(
-            "totalDays"
-        );
-
-    const totalHolidays =
-        document.getElementById(
-            "totalHolidays"
-        );
-
-    const completedHolidays =
-        document.getElementById(
-            "completedHolidays"
-        );
-
-    const remainingHolidays =
-        document.getElementById(
-            "remainingHolidays"
-        );
-
-    const workingDays =
-        document.getElementById(
-            "workingDays"
-        );
-
-
-    if (totalDays) {
-
-        totalDays.textContent =
-            stats.totalDays;
-    }
-
-
-    if (totalHolidays) {
-
-        totalHolidays.textContent =
-            stats.totalHolidays;
-    }
-
-
-    if (completedHolidays) {
-
-        completedHolidays.textContent =
-            progress.completed;
-    }
-
-
-    if (remainingHolidays) {
-
-        remainingHolidays.textContent =
-            progress.remaining;
-    }
-
-
-    if (workingDays) {
-
-        workingDays.textContent =
-            stats.workingDays;
-    }
-}
-
-
-// ============================================================
-// CHANGE YEAR
-// ============================================================
-
-function changeYear(year) {
-
-    year =
-        Number(year);
-
-
-    // ========================================================
-    // LIMIT YEAR
-    // ========================================================
-
-    if (
-        year < MIN_YEAR
-    ) {
-
-        year =
-            MIN_YEAR;
-    }
-
-
-    if (
-        year > MAX_YEAR
-    ) {
-
-        year =
-            MAX_YEAR;
-    }
-
-
-    currentYear =
-        year;
-
-
-    // Start from January
-    currentMonth =
-        0;
-
-
-    renderCalendar();
-
-    updateStatistics();
-
-    updateYearButtons();
-}
-
-
-// ============================================================
-// UPDATE YEAR BUTTONS
-// ============================================================
-
-function updateYearButtons() {
-
-    const buttons =
-        document.querySelectorAll(
-            ".year-selector button"
-        );
-
-
-    buttons.forEach(
-        button => {
-
-            const buttonYear =
-                Number(
-                    button.textContent.trim()
-                );
-
-
-            if (
-                buttonYear === currentYear
-            ) {
-
-                button.classList.add(
-                    "active"
-                );
-
-            } else {
-
-                button.classList.remove(
-                    "active"
-                );
-            }
-
-        }
-    );
-}
-
-
-// ============================================================
-// PREVIOUS MONTH
-// ============================================================
-
-function previousMonth() {
-
-    currentMonth--;
-
-
-    // ========================================================
-    // GO TO PREVIOUS YEAR
-    // ========================================================
-
-    if (
-        currentMonth < 0
-    ) {
-
-        currentMonth =
-            11;
-
-        currentYear--;
-    }
-
-
-    // ========================================================
-    // MINIMUM = JANUARY 2026
-    // ========================================================
-
-    if (
-        currentYear < MIN_YEAR
-    ) {
-
-        currentYear =
-            MIN_YEAR;
-
-        currentMonth =
-            0;
-    }
-
-
-    renderCalendar();
-
-    updateStatistics();
-
-    updateYearButtons();
-}
-
-
-// ============================================================
-// NEXT MONTH
-// ============================================================
-
-function nextMonth() {
-
-    currentMonth++;
-
-
-    // ========================================================
-    // GO TO NEXT YEAR
-    // ========================================================
-
-    if (
-        currentMonth > 11
-    ) {
-
-        currentMonth =
-            0;
-
-        currentYear++;
-    }
-
-
-    // ========================================================
-    // MAXIMUM = DECEMBER 2030
-    // ========================================================
-
-    if (
-        currentYear > MAX_YEAR
-    ) {
-
-        currentYear =
-            MAX_YEAR;
-
-        currentMonth =
-            11;
-    }
-
-
-    renderCalendar();
-
-    updateStatistics();
-
-    updateYearButtons();
-}
-
-
-// ============================================================
-// INITIAL LOAD
-// ============================================================
-
-document.addEventListener(
-    "DOMContentLoaded",
-    function () {
-
-        console.log(
-            "MGIT Holiday Calendar Loaded"
-        );
-
-
-        // ====================================================
-        // SAFETY CHECK
-        // ====================================================
-
-        if (
-            currentYear < MIN_YEAR
-        ) {
-
-            currentYear =
-                MIN_YEAR;
-
-            currentMonth =
-                0;
-        }
-
-
-        if (
-            currentYear > MAX_YEAR
-        ) {
-
-            currentYear =
-                MAX_YEAR;
-
-            currentMonth =
-                11;
-        }
-
-
-        // ====================================================
-        // LOAD CALENDAR
-        // ====================================================
-
-        renderCalendar();
-
-        updateStatistics();
-
-        updateYearButtons();
-
-    }
-);
+};
