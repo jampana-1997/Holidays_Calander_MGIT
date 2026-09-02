@@ -118,8 +118,8 @@ const holidays2027 = {
     "08-10-2027": "Durga Ashtami",
     "09-10-2027": "Maha Navami",
     "10-10-2027": "Vijaya Dasami / Dussehra",
-
     "29-10-2027": "Deepavali",
+  
     "14-11-2027": "Karthika Purnima / Guru Nanak Jayanti",
 
     "25-12-2027": "Christmas",
