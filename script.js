@@ -67,9 +67,7 @@ const holidays2026 = {
 "21-10-2026": "Vijaya Dasami Following Day",  
   
   
-  
-"07-11-2026": "Naraka Chaturdashi",  
-  
+    
 "08-11-2026": "Diwali",  
   
 "24-11-2026": "Karthika Purnima / Guru Nanak Jayanti",  
